@@ -5,9 +5,9 @@ void ofApp::setup()
     //ofSetWindowShape(1440, 810);
     ofSetFullscreen(true);
     
-    std::string datacfg = "/Users/gene/Code/of_v0.9.6_osx_release/apps/myApps/testYolo/bin/cfg/COCO_COPY_TEMP.data";
+    std::string datacfg = ofToDataPath("cfg/coco.data");
     std::string cfgfile = ofToDataPath( "cfg/yolo.cfg" );
-    std::string weightfile = "/Users/gene/Code/of_v0.9.6_osx_release/apps/myApps/testYolo/bin/data/yolo.weights";
+    std::string weightfile = ofToDataPath("yolo.weights");
     std::string nameslist = ofToDataPath( "cfg/coco.list" );
     darknet.init( cfgfile, weightfile, datacfg, nameslist );
 
